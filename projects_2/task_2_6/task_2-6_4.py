@@ -27,7 +27,7 @@ def scene_2(chosen_path):
     if chosen_path != None:
         choose_1 = chosen_path
     else:    
-        choose_1 = input("A) Еду прямо.\nБ) Останусь здесь, у камня.\nВ) Поверну коня назад.\nГ) Поверну направо.\nД) Поверну налево.\n\nВыбери букву: ")
+        choose_1 = input("A) Еду прямо.\nБ) Останусь здесь, у камня.\nВ) Поверну коня назад.\nГ) Поверну направо.\nД) Поверну налево.\n\nВыбери букву: ").upper()
 
     chosen_path = None
 
@@ -44,7 +44,7 @@ def scene_2(chosen_path):
         time.sleep(3)
         print("\nКак ты поступишь, витязь?\n")
         time.sleep(2)
-        choose_1 = input("A) Еду прямо.\nБ) Останусь здесь, у камня.\nВ) Поверну коня назад.\nГ) Поверну направо.\nД) Поверну налево.\n\nВыбери букву: ")
+        choose_1 = input("A) Еду прямо.\nБ) Останусь здесь, у камня.\nВ) Поверну коня назад.\nГ) Поверну направо.\nД) Поверну налево.\n\nВыбери букву: ").upper()
         counter_0 += 1
 
     if counter_0 == 3:
@@ -75,7 +75,7 @@ def scene_2(chosen_path):
         time.sleep(3)
         print("\nКак ты поступишь, витязь?\n")
         time.sleep(2)
-        choose_2 = input("A) Принять смерть.\nБ) Не принимать смерть.\n\nВыбери букву: ")
+        choose_2 = input("A) Принять смерть.\nБ) Не принимать смерть.\n\nВыбери букву: ").upper()
         return scene_3()
     
     if choose_1 == "Б":
@@ -94,7 +94,7 @@ def scene_2(chosen_path):
         time.sleep(2)
         print("\nКак ты поступишь, витязь?\n")
         time.sleep(2)
-        choose_3 = input("A) Упокоиться.\nБ) Встать и идти.\n\nВыбери букву: ")
+        choose_3 = input("A) Упокоиться.\nБ) Встать и идти.\n\nВыбери букву: ").upper()
         time.sleep(2)
 
         if choose_3 == "А":
@@ -126,7 +126,7 @@ def scene_2(chosen_path):
         time.sleep(3)
         print("\nКак ты поступишь, витязь?\n")
         time.sleep(2)
-        choose_4 = input("A) Упокоиться перед камнем\nБ) Позволить коню вести вас\nВ) Выбрать случайный путь\n\nВыбери букву: ")
+        choose_4 = input("A) Упокоиться перед камнем\nБ) Позволить коню вести вас\nВ) Выбрать случайный путь\n\nВыбери букву: ").upper()
         time.sleep(2)
 
         paths = ["А", "Б", "Г"]
@@ -181,7 +181,7 @@ def scene_2(chosen_path):
                 time.sleep(2)
                 print("\nЭтот камень — не преграда. Это порог. Ты готов переступить?")
                 time.sleep(3)
-                choose_4 = input("A) Готов.\n\nВыбери букву: ")
+                choose_4 = input("A) Готов.\n\nВыбери букву: ").upper()
                 time.sleep(2)
                 print("\nвы делаете шаг навстречу своему отражению. Мир вокруг рассыпается на тысячи сверкающих осколков.")
                 time.sleep(2)
@@ -213,7 +213,7 @@ def scene_3():
         print("\nКак ты поступишь, витязь?\n")
         time.sleep(2)
         counter_1 += 1
-        choose_2 = input("A) Принять смерть.\nБ) Не принимать смерть.\n\nВыбери букву: ")
+        choose_2 = input("A) Принять смерть.\nБ) Не принимать смерть.\n\nВыбери букву: ").upper()
 
     if counter_1 == 3:
         print("Финал №02:")
@@ -255,7 +255,7 @@ def scene_4():
 def end():
     time.sleep(4)
     print("\nКонец.")
-    restart_choose = input("\nA) Начать сначала.\nБ) Выйти из игры.\n\nВаш выбор: ")
+    restart_choose = input("\nA) Начать сначала.\nБ) Выйти из игры.\n\nВаш выбор: ").upper()
     time.sleep(1)
     if restart_choose == "А":
         return scene_1()
